@@ -102,6 +102,9 @@
                                     <constraint firstAttribute="width" constant="50" id="Uhw-bi-0re"/>
                                 </constraints>
                                 <state key="normal" image="ic_camera"/>
+                                <connections>
+                                    <action selector="capturePhoto:" destination="llo-uO-hBr" eventType="touchUpInside" id="bLg-Qi-dsf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

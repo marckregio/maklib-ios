@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		924077062006E04A007478CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924077052006E04A007478CE /* AppDelegate.swift */; };
-		924077082006E04A007478CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924077072006E04A007478CE /* ViewController.swift */; };
 		9240770B2006E04A007478CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924077092006E04A007478CE /* Main.storyboard */; };
 		9240770D2006E04A007478CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9240770C2006E04A007478CE /* Assets.xcassets */; };
 		924077102006E04A007478CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9240770E2006E04A007478CE /* LaunchScreen.storyboard */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		924077022006E04A007478CE /* maklib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maklib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924077052006E04A007478CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		924077072006E04A007478CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9240770A2006E04A007478CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9240770C2006E04A007478CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9240770F2006E04A007478CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 			children = (
 				924077172006E686007478CE /* gallery */,
 				924077052006E04A007478CE /* AppDelegate.swift */,
-				924077072006E04A007478CE /* ViewController.swift */,
 				924077092006E04A007478CE /* Main.storyboard */,
 				9240770C2006E04A007478CE /* Assets.xcassets */,
 				9240770E2006E04A007478CE /* LaunchScreen.storyboard */,
@@ -154,7 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9240771B2006F60D007478CE /* Camera.swift in Sources */,
-				924077082006E04A007478CE /* ViewController.swift in Sources */,
 				924077192006E7A3007478CE /* Chooser.swift in Sources */,
 				924077062006E04A007478CE /* AppDelegate.swift in Sources */,
 				9240771D20070643007478CE /* CameraController.swift in Sources */,

@@ -26,6 +26,8 @@
 	<string>Main</string>
 	<key>NSCameraUsageDescription</key>
 	<string>For taking photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>For saving photos</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
