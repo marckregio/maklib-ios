@@ -36,6 +36,9 @@
                                         <state key="normal" title="Gallery">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="photoLibraryPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyD-2q-WvR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -132,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39o-ej-kjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1254" y="77"/>
+            <point key="canvasLocation" x="1090" y="133"/>
         </scene>
     </scenes>
     <resources>

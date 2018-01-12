@@ -58,7 +58,7 @@
 		924077042006E04A007478CE /* maklib */ = {
 			isa = PBXGroup;
 			children = (
-				924077172006E686007478CE /* gallery */,
+				92C2BAEA2008EC4A00575B88 /* MediaLibrary */,
 				924077052006E04A007478CE /* AppDelegate.swift */,
 				924077092006E04A007478CE /* Main.storyboard */,
 				9240770C2006E04A007478CE /* Assets.xcassets */,
@@ -68,14 +68,14 @@
 			path = maklib;
 			sourceTree = "<group>";
 		};
-		924077172006E686007478CE /* gallery */ = {
+		92C2BAEA2008EC4A00575B88 /* MediaLibrary */ = {
 			isa = PBXGroup;
 			children = (
 				924077182006E7A3007478CE /* Chooser.swift */,
 				9240771A2006F60D007478CE /* Camera.swift */,
 				9240771C20070643007478CE /* CameraController.swift */,
 			);
-			path = gallery;
+			path = MediaLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
