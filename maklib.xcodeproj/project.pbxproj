@@ -14,6 +14,9 @@
 		924077192006E7A3007478CE /* Chooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924077182006E7A3007478CE /* Chooser.swift */; };
 		9240771B2006F60D007478CE /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240771A2006F60D007478CE /* Camera.swift */; };
 		9240771D20070643007478CE /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240771C20070643007478CE /* CameraController.swift */; };
+		9242E515200C4C6200901188 /* SQLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E514200C4C6200901188 /* SQLHelper.swift */; };
+		9242E517200C55AF00901188 /* SQLQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E516200C55AF00901188 /* SQLQueryBuilder.swift */; };
+		9242E519200EECCA00901188 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E518200EECCA00901188 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		924077182006E7A3007478CE /* Chooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chooser.swift; sourceTree = "<group>"; };
 		9240771A2006F60D007478CE /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		9240771C20070643007478CE /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		9242E514200C4C6200901188 /* SQLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLHelper.swift; sourceTree = "<group>"; };
+		9242E516200C55AF00901188 /* SQLQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLQueryBuilder.swift; sourceTree = "<group>"; };
+		9242E518200EECCA00901188 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		924077042006E04A007478CE /* maklib */ = {
 			isa = PBXGroup;
 			children = (
+				9242E513200C4A2900901188 /* DatabaseLibrary */,
 				92C2BAEA2008EC4A00575B88 /* MediaLibrary */,
 				924077052006E04A007478CE /* AppDelegate.swift */,
 				924077092006E04A007478CE /* Main.storyboard */,
@@ -66,6 +73,16 @@
 				924077112006E04A007478CE /* Info.plist */,
 			);
 			path = maklib;
+			sourceTree = "<group>";
+		};
+		9242E513200C4A2900901188 /* DatabaseLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				9242E514200C4C6200901188 /* SQLHelper.swift */,
+				9242E516200C55AF00901188 /* SQLQueryBuilder.swift */,
+				9242E518200EECCA00901188 /* UserModel.swift */,
+			);
+			path = DatabaseLibrary;
 			sourceTree = "<group>";
 		};
 		92C2BAEA2008EC4A00575B88 /* MediaLibrary */ = {
@@ -151,8 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9240771B2006F60D007478CE /* Camera.swift in Sources */,
+				9242E519200EECCA00901188 /* UserModel.swift in Sources */,
+				9242E515200C4C6200901188 /* SQLHelper.swift in Sources */,
 				924077192006E7A3007478CE /* Chooser.swift in Sources */,
 				924077062006E04A007478CE /* AppDelegate.swift in Sources */,
+				9242E517200C55AF00901188 /* SQLQueryBuilder.swift in Sources */,
 				9240771D20070643007478CE /* CameraController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,7 +31,7 @@ class Chooser: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        //let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         //myImageView.contentMode = .scaleAspectFit
         //myImageView.image = chosenImage
         dismiss(animated:true, completion: nil)
@@ -39,6 +39,22 @@ class Chooser: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func alert(){
+        let alertVC = UIAlertController(
+            title: "No Camera",
+            message: "Sorry, this device has no camera",
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.default,
+            handler: nil)
+        alertVC.addAction(okAction)
+        present(
+            alertVC,
+            animated: true,
+            completion: nil)
     }
     /*
     // MARK: - Navigation
