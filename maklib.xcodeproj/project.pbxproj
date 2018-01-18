@@ -17,6 +17,7 @@
 		9242E515200C4C6200901188 /* SQLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E514200C4C6200901188 /* SQLHelper.swift */; };
 		9242E517200C55AF00901188 /* SQLQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E516200C55AF00901188 /* SQLQueryBuilder.swift */; };
 		9242E519200EECCA00901188 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E518200EECCA00901188 /* UserModel.swift */; };
+		9242E51B2010253E00901188 /* DatabaseForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E51A2010253E00901188 /* DatabaseForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9242E514200C4C6200901188 /* SQLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLHelper.swift; sourceTree = "<group>"; };
 		9242E516200C55AF00901188 /* SQLQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLQueryBuilder.swift; sourceTree = "<group>"; };
 		9242E518200EECCA00901188 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9242E51A2010253E00901188 /* DatabaseForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				9242E514200C4C6200901188 /* SQLHelper.swift */,
 				9242E516200C55AF00901188 /* SQLQueryBuilder.swift */,
 				9242E518200EECCA00901188 /* UserModel.swift */,
+				9242E51A2010253E00901188 /* DatabaseForm.swift */,
 			);
 			path = DatabaseLibrary;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				924077192006E7A3007478CE /* Chooser.swift in Sources */,
 				924077062006E04A007478CE /* AppDelegate.swift in Sources */,
 				9242E517200C55AF00901188 /* SQLQueryBuilder.swift in Sources */,
+				9242E51B2010253E00901188 /* DatabaseForm.swift in Sources */,
 				9240771D20070643007478CE /* CameraController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

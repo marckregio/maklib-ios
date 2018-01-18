@@ -22,7 +22,7 @@ class SQLQueryBuilder{
     }
     
     static func INSERT(_ tableName: String, _ columns:[String], _ values: [String]) -> String {
-        if columns.count == values.count {
+        if columns.count != values.count {
             print("Values did not matched in count")
             return ""
         }
@@ -42,7 +42,7 @@ class SQLQueryBuilder{
     }
     
     static func UPDATE(_ tableName: String, _ columns:[String], _ values: [String], whereClause: String) -> String {
-        if columns.count == values.count {
+        if columns.count != values.count {
             print("Values did not matched in count")
             return ""
         }

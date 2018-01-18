@@ -31,6 +31,7 @@ class SQLHelper{
         if sqlite3_close(db) != SQLITE_OK {
             print("error closing database")
         }
+        db = nil
     }
     
     func createDatabase(){
@@ -44,7 +45,7 @@ class SQLHelper{
         closeDatabase()
     }
     
-    func insert(user:UserModel){
+    func insertUser(user:UserModel){
         openDatabase()
         if sqlite3_exec(db, SQLQueryBuilder.INSERT(USER, UserModel.databaseColumns(), user.databaseValues()), nil, nil, nil) != SQLITE_OK {
             let err = String(describing: sqlite3_errmsg(db)!)
@@ -52,26 +53,28 @@ class SQLHelper{
         } else {
             print(SQLQueryBuilder.INSERT(USER, UserModel.databaseColumns(), user.databaseValues()))
         }
-        closeDatabase()
+        //closeDatabase()
     }
     
-    func select(user:UserModel, whereClause:String) -> [String: String]{
+    func selectUsers(whereClause:String) -> [UserModel]{
         openDatabase()
         var pointer: OpaquePointer?
-        var returnMap = [String: String]()
+        var returnArray = [UserModel]()
+        
         if sqlite3_prepare(db, SQLQueryBuilder.SELECT(USER, whereClause: whereClause) , -1, &pointer, nil) != SQLITE_OK {
             let err = String(describing: sqlite3_errmsg(db)!)
             print(err)
+        } else {
+            print(SQLQueryBuilder.SELECT(USER, whereClause: whereClause))
         }
         
-        var index = 0
         while(sqlite3_step(pointer) == SQLITE_ROW){
-            returnMap[UserModel.databaseColumns()[index]] = String(describing: sqlite3_column_text(pointer, Int32(index)))
-            index += 1
+            returnArray.append(UserModel(name: String(cString: sqlite3_column_text(pointer, Int32(UserModel.columnIndex(columnName: UserModel.NAME)))),
+                                         address: String(cString: sqlite3_column_text(pointer,  Int32(UserModel.columnIndex(columnName: UserModel.ADDRESS))))))
         }
-        
-        closeDatabase()
-        return returnMap
+    
+        //closeDatabase()
+        return returnArray
     }
 }
 

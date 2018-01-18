@@ -30,6 +30,10 @@ struct UserModel{
         return columns
     }
     
+    static func columnIndex(columnName: String) -> Int {
+        return databaseColumns().index(of: columnName)! + 1
+    }
+    
     func databaseValues() -> [String]{
         var values = [String]()
         values.append(self.name)
@@ -37,4 +41,5 @@ struct UserModel{
         
         return values
     }
+
 }
