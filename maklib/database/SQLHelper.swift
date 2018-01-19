@@ -69,8 +69,10 @@ class SQLHelper{
         }
         
         while(sqlite3_step(pointer) == SQLITE_ROW){
-            returnArray.append(UserModel(name: String(cString: sqlite3_column_text(pointer, Int32(UserModel.columnIndex(columnName: UserModel.NAME)))),
-                                         address: String(cString: sqlite3_column_text(pointer,  Int32(UserModel.columnIndex(columnName: UserModel.ADDRESS))))))
+            returnArray.append(UserModel(id: String(cString: sqlite3_column_text(pointer,  Int32(UserModel.columnIndex(columnName: UserModel.ID)))),
+                                         name: String(cString: sqlite3_column_text(pointer, Int32(UserModel.columnIndex(columnName: UserModel.NAME)))),
+                                         address: String(cString: sqlite3_column_text(pointer,  Int32(UserModel.columnIndex(columnName: UserModel.ADDRESS))))
+            ))
         }
     
         //closeDatabase()

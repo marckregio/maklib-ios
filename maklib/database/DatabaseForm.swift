@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DatabaseForm: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DatabaseForm: UIViewController, UITableViewDataSource, UITableViewDelegate, OnRequestDelegate {
     
     @IBOutlet var nameField: UITextField!
     
@@ -17,13 +17,16 @@ class DatabaseForm: UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet var dataView: UITableView!
     
     var userList = [UserModel]()
-    var sql = SQLHelper()
+    let sql = SQLHelper()
+    let userData = UserRequest()
+    let alertHandler = AlertHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sql = SQLHelper()
+    
+        userData.onRequestDelegate = self
+        userData.request()
         
-        reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,13 +47,22 @@ class DatabaseForm: UIViewController, UITableViewDataSource, UITableViewDelegate
             return
         }
         
-        let newUser = UserModel(name: name!, address: address!)
-        sql.insertUser(user: newUser)
+        let alert = alertHandler.showAlert(title: "Saving", message: "Are you sure?") { (result) in
+            if result {
+                let newUser = UserModel(id: String(arc4random()), name: name!, address: address!)
+                self.sql.insertUser(user: newUser)
+                
+                self.nameField.text = ""
+                self.addressField.text = ""
+                
+                self.reloadData()
+            } else {
+                self.nameField.text = ""
+                self.addressField.text = ""
+            }
+        }
+        self.present(alert, animated: true)
         
-        nameField.text = ""
-        addressField.text = ""
-        
-        reloadData()
     }
     
     private func reloadData(){
@@ -58,7 +70,7 @@ class DatabaseForm: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         let result = sql.selectUsers(whereClause: "")
         for resultItem: UserModel in result{
-            userList.append(UserModel(name: resultItem.name, address: resultItem.address))
+            userList.append(UserModel(id: String(arc4random()), name: resultItem.name, address: resultItem.address))
         }
         
         print(userList.count)
@@ -75,6 +87,10 @@ class DatabaseForm: UIViewController, UITableViewDataSource, UITableViewDelegate
         cell.textLabel?.text = user.name + "-" + user.address
         
         return cell
+    }
+    
+    func onResult(_ result: String) {
+        self.reloadData()
     }
 
     /*

@@ -18,6 +18,9 @@
 		9242E517200C55AF00901188 /* SQLQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E516200C55AF00901188 /* SQLQueryBuilder.swift */; };
 		9242E519200EECCA00901188 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E518200EECCA00901188 /* UserModel.swift */; };
 		9242E51B2010253E00901188 /* DatabaseForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E51A2010253E00901188 /* DatabaseForm.swift */; };
+		92468D67201183B300A7ACA5 /* RESTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92468D66201183B300A7ACA5 /* RESTHelper.swift */; };
+		92468D69201189BF00A7ACA5 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92468D68201189BF00A7ACA5 /* UserRequest.swift */; };
+		92468D6C2011BA2300A7ACA5 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92468D6B2011BA2300A7ACA5 /* AlertHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		9242E516200C55AF00901188 /* SQLQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLQueryBuilder.swift; sourceTree = "<group>"; };
 		9242E518200EECCA00901188 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9242E51A2010253E00901188 /* DatabaseForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseForm.swift; sourceTree = "<group>"; };
+		92468D66201183B300A7ACA5 /* RESTHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTHelper.swift; sourceTree = "<group>"; };
+		92468D68201189BF00A7ACA5 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		92468D6B2011BA2300A7ACA5 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +72,10 @@
 		924077042006E04A007478CE /* maklib */ = {
 			isa = PBXGroup;
 			children = (
-				9242E513200C4A2900901188 /* DatabaseLibrary */,
-				92C2BAEA2008EC4A00575B88 /* MediaLibrary */,
+				92468D6A2011BA0E00A7ACA5 /* util */,
+				92468D6520117F3200A7ACA5 /* http */,
+				9242E513200C4A2900901188 /* database */,
+				92C2BAEA2008EC4A00575B88 /* media */,
 				924077052006E04A007478CE /* AppDelegate.swift */,
 				924077092006E04A007478CE /* Main.storyboard */,
 				9240770C2006E04A007478CE /* Assets.xcassets */,
@@ -77,7 +85,7 @@
 			path = maklib;
 			sourceTree = "<group>";
 		};
-		9242E513200C4A2900901188 /* DatabaseLibrary */ = {
+		9242E513200C4A2900901188 /* database */ = {
 			isa = PBXGroup;
 			children = (
 				9242E514200C4C6200901188 /* SQLHelper.swift */,
@@ -85,17 +93,34 @@
 				9242E518200EECCA00901188 /* UserModel.swift */,
 				9242E51A2010253E00901188 /* DatabaseForm.swift */,
 			);
-			path = DatabaseLibrary;
+			path = database;
 			sourceTree = "<group>";
 		};
-		92C2BAEA2008EC4A00575B88 /* MediaLibrary */ = {
+		92468D6520117F3200A7ACA5 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				92468D66201183B300A7ACA5 /* RESTHelper.swift */,
+				92468D68201189BF00A7ACA5 /* UserRequest.swift */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+		92468D6A2011BA0E00A7ACA5 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				92468D6B2011BA2300A7ACA5 /* AlertHandler.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		92C2BAEA2008EC4A00575B88 /* media */ = {
 			isa = PBXGroup;
 			children = (
 				924077182006E7A3007478CE /* Chooser.swift */,
 				9240771A2006F60D007478CE /* Camera.swift */,
 				9240771C20070643007478CE /* CameraController.swift */,
 			);
-			path = MediaLibrary;
+			path = media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +200,11 @@
 				9242E515200C4C6200901188 /* SQLHelper.swift in Sources */,
 				924077192006E7A3007478CE /* Chooser.swift in Sources */,
 				924077062006E04A007478CE /* AppDelegate.swift in Sources */,
+				92468D67201183B300A7ACA5 /* RESTHelper.swift in Sources */,
+				92468D6C2011BA2300A7ACA5 /* AlertHandler.swift in Sources */,
 				9242E517200C55AF00901188 /* SQLQueryBuilder.swift in Sources */,
 				9242E51B2010253E00901188 /* DatabaseForm.swift in Sources */,
+				92468D69201189BF00A7ACA5 /* UserRequest.swift in Sources */,
 				9240771D20070643007478CE /* CameraController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
