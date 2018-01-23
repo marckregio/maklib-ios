@@ -10,12 +10,13 @@ import Foundation
 
 protocol OnRequestDelegate: class {
     func onResult(_ result: String)
+    func onError(_ result: String, description: String)
 }
 
 class RESTHelper{
     
-    static let RESULT_SUCCESS = "success"
-    static let RESULT_FAIL = "fail";
+    static let RESULT_SUCCESS = "Success"
+    static let RESULT_FAIL = "Failed";
     
     let BASE_API: String = "http://localhost:4000/files/"
     var API_String: String = ""
@@ -30,7 +31,7 @@ class RESTHelper{
         URLSession.shared.dataTask(with: API_URL) {
             (data, response, error) in
             if error != nil {
-                print(error!.localizedDescription)
+                self.onError(error!.localizedDescription)
             }
             
             guard let data = data else {return}
@@ -43,5 +44,9 @@ class RESTHelper{
         //override in child class
     }
     
-
+    func onError(_ errorMessage: String){
+        DispatchQueue.main.async {
+            self.onRequestDelegate?.onError(RESTHelper.RESULT_FAIL, description: errorMessage)
+        }
+    }
 }

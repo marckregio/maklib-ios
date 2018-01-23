@@ -30,8 +30,10 @@ class UserRequest: RESTHelper {
                 self.onRequestDelegate?.onResult(RESTHelper.RESULT_SUCCESS)
             }
         } catch let jsonError {
-            print(jsonError)
-            onRequestDelegate?.onResult(RESTHelper.RESULT_FAIL)
+            DispatchQueue.main.async {
+                self.onRequestDelegate?.onError(RESTHelper.RESULT_FAIL, description: jsonError.localizedDescription)
+            }
         }
     }
+    
 }

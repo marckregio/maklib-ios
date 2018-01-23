@@ -92,6 +92,13 @@ class DatabaseForm: UIViewController, UITableViewDataSource, UITableViewDelegate
     func onResult(_ result: String) {
         self.reloadData()
     }
+    
+    func onError(_ result: String, description: String) {
+        let alert = alertHandler.showAlert(title: result, message: description)
+        self.present(alert, animated: true)
+        
+        self.reloadData() //load local data
+    }
 
     /*
     // MARK: - Navigation
