@@ -21,6 +21,7 @@
 		92468D67201183B300A7ACA5 /* RESTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92468D66201183B300A7ACA5 /* RESTHelper.swift */; };
 		92468D69201189BF00A7ACA5 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92468D68201189BF00A7ACA5 /* UserRequest.swift */; };
 		92468D6C2011BA2300A7ACA5 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92468D6B2011BA2300A7ACA5 /* AlertHandler.swift */; };
+		9266A4C7201817060015FA52 /* QRCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9266A4C6201817060015FA52 /* QRCodeScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		92468D66201183B300A7ACA5 /* RESTHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTHelper.swift; sourceTree = "<group>"; };
 		92468D68201189BF00A7ACA5 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		92468D6B2011BA2300A7ACA5 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		9266A4C6201817060015FA52 /* QRCodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				924077182006E7A3007478CE /* Chooser.swift */,
 				9240771A2006F60D007478CE /* Camera.swift */,
 				9240771C20070643007478CE /* CameraController.swift */,
+				9266A4C6201817060015FA52 /* QRCodeScanner.swift */,
 			);
 			path = media;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				9240771B2006F60D007478CE /* Camera.swift in Sources */,
 				9242E519200EECCA00901188 /* UserModel.swift in Sources */,
+				9266A4C7201817060015FA52 /* QRCodeScanner.swift in Sources */,
 				9242E515200C4C6200901188 /* SQLHelper.swift in Sources */,
 				924077192006E7A3007478CE /* Chooser.swift in Sources */,
 				924077062006E04A007478CE /* AppDelegate.swift in Sources */,

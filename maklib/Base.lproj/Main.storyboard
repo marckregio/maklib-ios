@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fwR-rA-LXx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZc-AI-Gr3">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="313.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="202.5"/>
                                         <state key="normal" title="Camera">
                                             <color key="titleColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -32,12 +32,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW6-Nz-gxO">
-                                        <rect key="frame" x="0.0" y="333.5" width="375" height="313.5"/>
+                                        <rect key="frame" x="0.0" y="222.5" width="375" height="202"/>
                                         <state key="normal" title="Gallery">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="photoLibraryPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyD-2q-WvR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeA-Kl-a0S">
+                                        <rect key="frame" x="0.0" y="444.5" width="375" height="202.5"/>
+                                        <state key="normal" title="QRCode Scanner">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="eeg-0k-xvH" kind="showDetail" id="lTf-hW-f0L"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -55,6 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="25" y="354"/>
         </scene>
         <!--Database Form-->
         <scene sceneID="3Te-Js-vY0">
@@ -142,7 +152,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2P-xL-wtK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="846"/>
+            <point key="canvasLocation" x="25" y="1084"/>
+        </scene>
+        <!--Code Scanner-->
+        <scene sceneID="cD8-fA-Jzj">
+            <objects>
+                <viewController id="eeg-0k-xvH" customClass="QRCodeScanner" customModule="maklib" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NN3-2K-Iut">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-h0-qug">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xyc-vo-f2G" firstAttribute="trailing" secondItem="DWr-h0-qug" secondAttribute="trailing" id="DmP-ap-YGj"/>
+                            <constraint firstItem="DWr-h0-qug" firstAttribute="leading" secondItem="xyc-vo-f2G" secondAttribute="leading" id="FQ8-gt-l9p"/>
+                            <constraint firstItem="xyc-vo-f2G" firstAttribute="bottom" secondItem="DWr-h0-qug" secondAttribute="bottom" id="MAa-8O-vhD"/>
+                            <constraint firstItem="DWr-h0-qug" firstAttribute="top" secondItem="xyc-vo-f2G" secondAttribute="top" id="kFY-a7-CCs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xyc-vo-f2G"/>
+                    </view>
+                    <connections>
+                        <outlet property="qrScannerView" destination="DWr-h0-qug" id="47F-Kz-8lh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFv-vW-55O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216.8" y="596.85157421289364"/>
         </scene>
         <!--Camera-->
         <scene sceneID="ybX-xk-2pi">
@@ -223,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39o-ej-kjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="354"/>
+            <point key="canvasLocation" x="1217" y="-96"/>
         </scene>
     </scenes>
     <resources>
